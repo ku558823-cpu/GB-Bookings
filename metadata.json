@@ -1,0 +1,6 @@
+{
+  "name": "GB Bookings - Commission Engine & Escrow Audit",
+  "description": "Platform commission retention, anti-duplicate idempotent webhooks, and partner disbursement ledger for Gilgit-Baltistan travel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

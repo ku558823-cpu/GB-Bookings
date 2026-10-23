@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#006194", "on-surface": "#0b1c30", "secondary": "#565e74", "on-error": "#ffffff", "on-secondary-container": "#5c647a", "outline-variant": "#bfc7d2", "on-primary-fixed": "#001d31", "on-tertiary-fixed": "#00201d", "primary-container": "#007bb9", "surface-dim": "#cbdbf5", "on-tertiary-fixed-variant": "#005049", "secondary-fixed-dim": "#bec6e0", "on-primary-fixed-variant": "#004b73", "on-primary": "#ffffff", "on-secondary-fixed": "#131b2e", "background": "#f8f9ff", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "tertiary-fixed": "#89f5e7", "surface-container-high": "#dce9ff", "tertiary-container": "#008378", "outline": "#707881", "inverse-on-surface": "#eaf1ff", "surface-container-lowest": "#ffffff", "secondary-fixed": "#dae2fd", "tertiary-fixed-dim": "#6bd8cb", "primary-fixed": "#cce5ff", "error": "#ba1a1a", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-container-highest": "#d3e4fe", "surface-container-low": "#eff4ff", "on-surface-variant": "#3f4850", "on-secondary-fixed-variant": "#3f465c", "surface-container": "#e5eeff", "secondary-container": "#dae2fd", "tertiary": "#00685f", "on-primary-container": "#fdfcff", "inverse-primary": "#93ccff", "primary-fixed-dim": "#93ccff", "inverse-surface": "#213145", "on-background": "#0b1c30", "surface-tint": "#006398", "surface": "#f8f9ff", "on-secondary": "#ffffff", "surface-bright": "#f8f9ff", "on-tertiary-container": "#f4fffc" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin-mobile": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "2rem", "space-xl": "2rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "price-display": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "700" }], "headline-xl-mobile": ["1.875rem", { "lineHeight": "2.25rem", "fontWeight": "800" }], "body-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "price-display": ["1.5rem", { "lineHeight": "1.75rem", "fontWeight": "800" }], "body-sm": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "fontWeight": "700" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "600" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "fontWeight": "700" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "headline-xl": ["2.5rem", { "lineHeight": "3rem", "fontWeight": "800" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="stays" href="#"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-md text-headline-md tracking-tighter">GB</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">GB Bookings</span><span class="font-label-sm text-label-sm text-secondary leading-tight tracking-wider uppercase">Platform Admin Portal</span></div></a><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full border border-outline-variant"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary">Escrow Split Engine Active</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs"><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">payments</span><span class="tracking-tight">PKR Gateway</span></button><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">notifications</span><span class="tracking-tight">Alerts</span></button></div><a class="inline-flex items-center px-space-md py-space-sm rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors tracking-tight" data-path="stays" href="#">Public Marketplace</a><div class="pl-space-xs border-l border-outline-variant flex items-center gap-space-sm"><img alt="Owner Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLDQ71g-V9fnEyEuPEoUkxfrpQ8cnZF-bNCHAdZKXuAd4V-BPzezISmIgpEGNrDGwYddATKalPayycpf5iaG9gan2gLAkkOqg_QqBlFMHgSm6NFzaM5cxh4a2VsMBBA0g37zbOwJDi0IP2sbEvteHJ1xu3kcueZFCjUhMBg_KHWh-nZB0ONzDZYV8lYUzyL1bM-FJTOiMJuXJTOnaNPYvHPfFWWKXOMiK6ANt3IgIRl_dhEjfvw1hZ"/><div class="hidden xl:flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight">Super Admin</span><span class="font-label-sm text-label-sm text-secondary leading-none">Owner / Finance</span></div></div></div></div></header><aside class="fixed top-20 left-0 bottom-0 w-64 bg-surface-container-lowest border-r border-outline-variant z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md space-y-space-md"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Commission Controls</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-label-md font-semibold"><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-label-md font-semibold" data-path="admin-commission-portal" href="#">Overview</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-label-md font-semibold" data-path="admin-commission-portal" href="#">Bookings &amp; Escrow</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-label-md font-semibold" data-path="admin-commission-portal" href="#">Commissions &amp; Splits (50/50)</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-label-md font-semibold" data-path="admin-commission-portal" href="#">Vendor Payouts</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-lg transition-colors bg-surface-container text-primary font-label-md font-semibold" data-path="admin-commission-portal" href="#">Refund Audits</a></nav></div><div class="p-space-md border-t border-outline-variant bg-surface-container-low"><div class="rounded-lg bg-surface-container p-space-sm space-y-space-xs"><p class="font-label-sm text-label-sm text-on-surface font-semibold">Escrow Retention Ratio</p><p class="font-body-sm text-body-sm text-secondary">50% Advanced / 50% Post-Trip Payout Policy active.</p></div></div></aside><main class="w-full pt-20 pl-64 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<div class="p-space-lg space-y-space-lg max-w-[1440px] mx-auto w-full">
+<!-- Top Admin Header & Global Status -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+            GB Escrow Ledger v4.2
+          </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            Automated 50:50 Commission Engine
+          </span>
+<span class="text-secondary font-label-sm text-label-sm">Peak Autumn Season (Gilgit-Baltistan)</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Commission Engine &amp; Escrow Audit</h1>
+<p class="font-body-sm text-body-sm text-secondary">
+          Platform commission retention, anti-duplicate idempotent webhooks, and partner disbursement ledger.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+          Rules Config
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">receipt_long</span>
+          FBR Tax Reconciliation
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" id="openRefundModal" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+          Clawback Audit Log
+        </button>
+</div>
+</div>
+<!-- Executive KPI Grid (50/50 Split Focus) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: GBV -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-container rounded-full opacity-60 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between relative">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Total Gross Bookings</span>
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+</div>
+<div class="mt-space-md relative">
+<div class="font-price-display text-price-display text-on-surface">PKR 4,820,000</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +24.8%
+            </span>
+<span class="font-body-sm text-body-sm text-secondary">vs last month</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-secondary font-label-sm text-label-sm flex justify-between">
+<span>Settled Bookings</span>
+<span class="font-semibold text-on-surface">1,180 txns</span>
+</div>
+</div>
+<!-- Card 2: Platform Commission -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary/10 rounded-full group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between relative">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Platform Revenue (50%)</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-tertiary text-on-tertiary font-bold">LOCKED 50%</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+<div class="mt-space-md relative">
+<div class="font-price-display text-price-display text-tertiary">PKR 2,410,000</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +18.4%
+            </span>
+<span class="font-body-sm text-body-sm text-secondary">Auto-credited post-settlement</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-secondary font-label-sm text-label-sm flex justify-between">
+<span>Accrual Protocol</span>
+<span class="font-semibold text-on-surface">Instant Net Split</span>
+</div>
+</div>
+<!-- Card 3: Vendor Payouts -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-container-high rounded-full opacity-60 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between relative">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Partner Payouts (50%)</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">storefront</span>
+</div>
+<div class="mt-space-md relative">
+<div class="font-price-display text-price-display text-on-surface">PKR 2,410,000</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="font-body-sm text-body-sm text-secondary">PKR 1.84M Settled • PKR 570k In Transit</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-secondary font-label-sm text-label-sm flex justify-between">
+<span>Channels</span>
+<span class="font-semibold text-on-surface">1Link • Raast • HBL</span>
+</div>
+</div>
+<!-- Card 4: Escrow Hold -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-variant rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex items-center justify-between relative">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Escrow Hold Balance</span>
+<span class="material-symbols-outlined text-primary text-[20px]">lock_clock</span>
+</div>
+<div class="mt-space-md relative">
+<div class="font-price-display text-price-display text-primary">PKR 380,000</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="font-body-sm text-body-sm text-secondary">Active trips awaiting check-out</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-secondary font-label-sm text-label-sm flex justify-between">
+<span>Karakoram Guarantee</span>
+<span class="font-semibold text-tertiary">100% Protected</span>
+</div>
+</div>
+</div>
+<!-- Automated Commission Engine Rules Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Automated Split Engine Policies</h2>
+<p class="font-body-sm text-body-sm text-secondary">Enforced system-wide across Stays, 4x4 Jeeps, Treks, and Alpine Guides</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary">Auto-Disburse on Check-out:</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="autoDisburseToggle" type="checkbox"/>
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">Enabled</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Rule 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Payment Trigger Rule</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Confirmed Settlement Hook</p>
+<p class="font-body-sm text-body-sm text-secondary">
+              Commissions only debit &amp; credit into platform account after webhook confirmation from <strong>Easypaisa, JazzCash, 1Link, or Raast QR</strong>. Pending orders remain non-accruing.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Latency SLA: &lt; 420ms</span>
+<span class="text-tertiary font-semibold">Active Enforced</span>
+</div>
+</div>
+<!-- Rule 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Idempotency Shield</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">SHA-256 Anti-Double Booking</p>
+<p class="font-body-sm text-body-sm text-secondary">
+              High-frequency guest retries or repeated payment callbacks evaluate cryptographic idempotency headers. Prevents duplicate 50% commission entries on unstable mountain 4G connections.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Zero Duplicates Logged</span>
+<span class="text-tertiary font-semibold">100% Match Rate</span>
+</div>
+</div>
+<!-- Rule 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">Karakoram Weather Protocol</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Automated Clawback Engine</p>
+<p class="font-body-sm text-body-sm text-secondary">
+              If Babusar Pass closes or Gilgit flight cancels, 100% is refunded to guest. The platform's 50% commission is <strong>auto-reversed and debited from the ledger</strong> simultaneously.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Zero Vendor Penalty</span>
+<span class="text-primary font-semibold">Immutable Audit Trail</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Analytics: Vertical Performance & Top Partners -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- 50% Split by Vertical -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm lg:col-span-2 space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Commission Yield by Travel Vertical</h3>
+<p class="font-body-sm text-body-sm text-secondary">Real-time 50% revenue distribution across Gilgit-Baltistan categories</p>
+</div>
+<span class="px-space-sm py-1 bg-surface-container text-primary font-label-sm text-label-sm rounded-md font-semibold">
+            Oct 2024 Yield
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[20px]">directions_car</span>
+<span class="font-label-sm text-label-sm text-secondary">42% Vol</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface mt-2">4x4 Jeeps &amp; Prado</p>
+<p class="font-headline-sm text-headline-sm text-tertiary">PKR 1,012,200</p>
+<p class="font-label-sm text-label-sm text-secondary">Platform 50% cut</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[20px]">apartment</span>
+<span class="font-label-sm text-label-sm text-secondary">31% Vol</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface mt-2">Stays &amp; Resorts</p>
+<p class="font-headline-sm text-headline-sm text-tertiary">PKR 747,100</p>
+<p class="font-label-sm text-label-sm text-secondary">Platform 50% cut</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[20px]">hiking</span>
+<span class="font-label-sm text-label-sm text-secondary">19% Vol</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface mt-2">K2 / Treks &amp; Guides</p>
+<p class="font-headline-sm text-headline-sm text-tertiary">PKR 457,900</p>
+<p class="font-label-sm text-label-sm text-secondary">High ticket size</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[20px]">local_cafe</span>
+<span class="font-label-sm text-label-sm text-secondary">8% Vol</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface mt-2">Local Experiences</p>
+<p class="font-headline-sm text-headline-sm text-tertiary">PKR 192,800</p>
+<p class="font-label-sm text-label-sm text-secondary">Cultural &amp; Camping</p>
+</div>
+</div>
+<!-- Inline SVG Multi-Segment Ratio Bar -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm text-secondary">
+<span>Portfolio Composition</span>
+<span>Total Earned: PKR 2,410,000</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 42%" title="4x4 Fleet (42%)"></div>
+<div class="h-full bg-primary-container" style="width: 31%" title="Stays (31%)"></div>
+<div class="h-full bg-tertiary" style="width: 19%" title="Expeditions (19%)"></div>
+<div class="h-full bg-secondary" style="width: 8%" title="Experiences (8%)"></div>
+</div>
+<div class="flex items-center gap-space-md flex-wrap pt-space-xs">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> 4x4 Fleet (PKR 1.01M)
+            </div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span> Resorts &amp; Stays (PKR 747K)
+            </div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> Treks &amp; Expeditions (PKR 457K)
+            </div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Experiences (PKR 192K)
+            </div>
+</div>
+</div>
+</div>
+<!-- Verified High-Volume Local Partners -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Top Vendor Payouts</h3>
+<span class="text-tertiary font-label-sm text-label-sm font-semibold">50% Net Share</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Verified Gilgit-Baltistan service operators</p>
+<div class="mt-space-md space-y-space-sm">
+<!-- Partner 1 -->
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+                  HI
+                </div>
+<div class="truncate">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Hunza Serena Inn</span>
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Karimabad • 18 Bookings</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">PKR 482,000</span>
+<span class="block font-label-sm text-label-sm text-tertiary">Disbursed (HBL)</span>
+</div>
+</div>
+<!-- Partner 2 -->
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+                  RA
+                </div>
+<div class="truncate">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Rehman Ali 4x4 Fleet</span>
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Skardu &amp; Deosai • 24 Trips</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">PKR 336,000</span>
+<span class="block font-label-sm text-label-sm text-tertiary">Disbursed (Meezan)</span>
+</div>
+</div>
+<!-- Partner 3 -->
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+                  FM
+                </div>
+<div class="truncate">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Fairy Meadows Cottages</span>
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Raikot / Raikot Bridge</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">PKR 210,000</span>
+<span class="block font-label-sm text-label-sm text-secondary">PKR 70k in Escrow</span>
+</div>
+</div>
+<!-- Partner 4 -->
+<div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold">
+                  GR
+                </div>
+<div class="truncate">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Ghulam Raza Alpine Guides</span>
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Concordia / Baltoro Base</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">PKR 280,000</span>
+<span class="block font-label-sm text-label-sm text-tertiary">Disbursed (Raast)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs">
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Partner Banking Network</span>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-[11px] font-bold">1Link</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-[11px] font-bold">Raast</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-[11px] font-bold">Meezan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Bookings & Commission Ledger Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Ledger Header & Filter Controls -->
+<div class="p-space-lg space-y-space-md border-b-0">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Live Bookings &amp; Split Ledger</h2>
+<p class="font-body-sm text-body-sm text-secondary">Audit individual booking transactions, idempotent payloads, and escrow triggers.</p>
+</div>
+<!-- Tabs -->
+<div class="inline-flex bg-surface-container-low p-1 rounded-lg self-start lg:self-center">
+<button class="ledger-tab px-space-md py-1.5 rounded-md text-on-surface bg-surface-container-lowest shadow-sm font-label-md text-label-md" data-target="all">
+              All Bookings (1,248)
+            </button>
+<button class="ledger-tab px-space-md py-1.5 rounded-md text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" data-target="confirmed">
+              Confirmed &amp; Split (1,180)
+            </button>
+<button class="ledger-tab px-space-md py-1.5 rounded-md text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" data-target="escrow">
+              Pending / Escrow (32)
+            </button>
+<button class="ledger-tab px-space-md py-1.5 rounded-md text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" data-target="refunded">
+              Refunded / Clawed (36)
+            </button>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest shadow-inner" id="bookingSearchInput" placeholder="Search by ID (#GB-), Vendor, Customer or Raast Ref..." type="text"/>
+</div>
+<div class="md:col-span-3">
+<select class="w-full px-3 py-2 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option value="">All Regions (Hunza, Skardu, Gilgit, Fairy Meadows)</option>
+<option value="hunza">Hunza Valley &amp; Karimabad</option>
+<option value="skardu">Skardu &amp; Baltistan</option>
+<option value="gilgit">Gilgit City &amp; Bagrote</option>
+<option value="fairymeadows">Fairy Meadows &amp; Raikot</option>
+<option value="khunjerab">Khunjerab / Sost Border</option>
+</select>
+</div>
+<div class="md:col-span-3">
+<select class="w-full px-3 py-2 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option value="">Payment Gateway: All (Easypaisa, JazzCash, Raast)</option>
+<option value="easypaisa">Easypaisa Mobile Account</option>
+<option value="jazzcash">JazzCash Direct</option>
+<option value="raast">Raast Instant QR</option>
+<option value="card">1Link Card Gateway</option>
+</select>
+</div>
+<div class="md:col-span-2 flex items-center justify-end gap-space-xs">
+<button class="w-full flex items-center justify-center gap-1.5 px-space-md py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+              Export CSV
+            </button>
+</div>
+</div>
+</div>
+<!-- High-Density Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+<tr>
+<th class="py-space-md px-space-md" scope="col">Booking ID &amp; Hash</th>
+<th class="py-space-md px-space-md" scope="col">Service &amp; Vendor Details</th>
+<th class="py-space-md px-space-md" scope="col">Customer &amp; Channel</th>
+<th class="py-space-md px-space-md" scope="col">Gross Total</th>
+<th class="py-space-md px-space-md" scope="col">Platform (50%)</th>
+<th class="py-space-md px-space-md" scope="col">Vendor Share (50%)</th>
+<th class="py-space-md px-space-md" scope="col">Split Status</th>
+<th class="py-space-md px-space-md text-right" scope="col">Ledger Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container" id="bookingsTableBody">
+<!-- Row 1: High Ticket Stay -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">#GB-89421</div>
+<div class="text-[11px] text-secondary">Oct 14, 2024 • 14:22 PKT</div>
+<div class="inline-flex items-center gap-1 text-[10px] text-secondary mt-1 bg-surface-container px-1.5 py-0.5 rounded font-mono">
+<span>sha256:7f4a...92b</span>
+<span class="material-symbols-outlined text-[12px] text-tertiary">check_circle</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Hunza Serena Inn - Rakaposhi Executive</div>
+<div class="text-secondary text-[12px]">Hotel &amp; Resort Stay • 3 Nights • Karimabad</div>
+<div class="flex items-center gap-1 text-[11px] text-primary mt-1">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+                  Hunza Valley
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface">Zain Ali Khan</div>
+<div class="text-secondary text-[12px]">+92 300 481****</div>
+<div class="mt-1">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#14A05B]/15 text-[#14A05B] inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#14A05B]"></span> Easypaisa Settled
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-price-display text-[15px] text-on-surface">PKR 111,500</div>
+<span class="text-[11px] text-secondary">Paid in full</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex flex-col">
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-bold text-label-sm text-[12px]">
+                    + PKR 55,750
+                  </span>
+<span class="text-[10px] text-tertiary mt-0.5 font-medium">Auto-credited (50.0%)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">PKR 55,750</div>
+<span class="text-[11px] text-secondary">Meezan Direct Pay</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-tertiary/15 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Confirmed Split
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top text-right space-x-1">
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Inspect Webhook Payload" type="button">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Ledger Trace" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: 4x4 Jeep Rental -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">#GB-89419</div>
+<div class="text-[11px] text-secondary">Oct 14, 2024 • 13:48 PKT</div>
+<div class="inline-flex items-center gap-1 text-[10px] text-secondary mt-1 bg-surface-container px-1.5 py-0.5 rounded font-mono">
+<span>sha256:3a1c...10d</span>
+<span class="material-symbols-outlined text-[12px] text-tertiary">check_circle</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Rehman Ali - Prado TZ 4x4 Custom</div>
+<div class="text-secondary text-[12px]">Skardu - Deosai - Shangrila (4 Days Transit)</div>
+<div class="flex items-center gap-1 text-[11px] text-primary mt-1">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+                  Skardu Central
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface">Sarah Maryam</div>
+<div class="text-secondary text-[12px]">+92 333 912****</div>
+<div class="mt-1">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#E61C24]/15 text-[#E61C24] inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#E61C24]"></span> JazzCash Paid
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-price-display text-[15px] text-on-surface">PKR 76,000</div>
+<span class="text-[11px] text-secondary">Paid in full</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex flex-col">
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-bold text-label-sm text-[12px]">
+                    + PKR 38,000
+                  </span>
+<span class="text-[10px] text-tertiary mt-0.5 font-medium">Auto-credited (50.0%)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">PKR 38,000</div>
+<span class="text-[11px] text-secondary">HBL Microfinance</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-tertiary/15 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Confirmed Split
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top text-right space-x-1">
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Inspect Webhook Payload" type="button">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Ledger Trace" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: High Escrow K2 Trek (Escrow in Progress) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/30">
+<td class="py-space-md px-space-md align-top">
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">#GB-89390</div>
+<div class="text-[11px] text-secondary">Oct 14, 2024 • 11:05 PKT</div>
+<div class="inline-flex items-center gap-1 text-[10px] text-secondary mt-1 bg-surface-container px-1.5 py-0.5 rounded font-mono">
+<span>sha256:cc98...41e</span>
+<span class="material-symbols-outlined text-[12px] text-primary">hourglass_top</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Ghulam Raza - K2 Base Camp Expedition Guide</div>
+<div class="text-secondary text-[12px]">12-Day High Altitude Trek • 4 Porters + Gear</div>
+<div class="flex items-center gap-1 text-[11px] text-primary mt-1">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+                  Askole to Concordia
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface">Hamza Tariq</div>
+<div class="text-secondary text-[12px]">+92 321 550****</div>
+<div class="mt-1">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary/15 text-primary inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Raast QR Transfer
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-price-display text-[15px] text-on-surface">PKR 240,000</div>
+<span class="text-[11px] text-secondary">Escrow Locked</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex flex-col">
+<span class="px-2 py-0.5 rounded bg-primary/15 text-primary font-bold text-label-sm text-[12px]">
+                    PKR 120,000
+                  </span>
+<span class="text-[10px] text-primary mt-0.5 font-medium">On-Hold Escrow (50%)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">PKR 120,000</div>
+<span class="text-[11px] text-secondary">Pending Check-in</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[14px]">lock</span> Trip in Progress
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top text-right space-x-1">
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Inspect Escrow" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Ledger Trace" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Refunded / Weather Clawback Example -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-error-container/10">
+<td class="py-space-md px-space-md align-top">
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">#GB-88102</div>
+<div class="text-[11px] text-secondary">Oct 13, 2024 • 09:15 PKT</div>
+<div class="inline-flex items-center gap-1 text-[10px] text-error mt-1 bg-error-container px-1.5 py-0.5 rounded font-mono">
+<span>sha256:bf22...89a</span>
+<span class="material-symbols-outlined text-[12px] text-error">cancel</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Skardu Willys 4x4 - Babusar Top Transit</div>
+<div class="text-secondary text-[12px]">Jeep Transit • Babusar Road Snow Closure</div>
+<div class="flex items-center gap-1 text-[11px] text-error mt-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                  Karakoram Weather Protocol Triggered
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface">Bilal Ahmed</div>
+<div class="text-secondary text-[12px]">+92 314 620****</div>
+<div class="mt-1">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-error-container text-on-error-container inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> 100% Refund Disbursed
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-price-display text-[15px] text-on-surface line-through">PKR 28,000</div>
+<span class="text-[11px] text-error font-medium">PKR 0 Net</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex flex-col">
+<span class="px-2 py-0.5 rounded bg-error-container text-error font-bold text-label-sm text-[12px]">
+                    - PKR 14,000
+                  </span>
+<span class="text-[10px] text-error mt-0.5 font-medium">Reversed &amp; Clawed Back</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-secondary line-through">PKR 14,000</div>
+<span class="text-[11px] text-secondary">Vendor Released (0 Penalty)</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[14px]">undo</span> Clawback Audited
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top text-right space-x-1">
+<button class="view-clawback-btn p-1.5 hover:bg-surface-container rounded text-error hover:text-error-container" title="View Clawback Audit Voucher" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Inspect Webhook" type="button">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Fairy Meadows Alpine Cottages -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">#GB-89381</div>
+<div class="text-[11px] text-secondary">Oct 13, 2024 • 08:02 PKT</div>
+<div class="inline-flex items-center gap-1 text-[10px] text-secondary mt-1 bg-surface-container px-1.5 py-0.5 rounded font-mono">
+<span>sha256:19ad...55f</span>
+<span class="material-symbols-outlined text-[12px] text-tertiary">check_circle</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Fairy Meadows Alpine Cottages - Nanga Parbat View</div>
+<div class="text-secondary text-[12px]">Alpine Cabin • 2 Nights • Raikot Valley</div>
+<div class="flex items-center gap-1 text-[11px] text-primary mt-1">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+                  Fairy Meadows
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface">Shahid Afridi</div>
+<div class="text-secondary text-[12px]">+92 301 771****</div>
+<div class="mt-1">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#14A05B]/15 text-[#14A05B] inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#14A05B]"></span> Easypaisa Settled
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-price-display text-[15px] text-on-surface">PKR 45,000</div>
+<span class="text-[11px] text-secondary">Paid in full</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex flex-col">
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-bold text-label-sm text-[12px]">
+                    + PKR 22,500
+                  </span>
+<span class="text-[10px] text-tertiary mt-0.5 font-medium">Auto-credited (50.0%)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md text-on-surface font-semibold">PKR 22,500</div>
+<span class="text-[11px] text-secondary">1Link Disbursed</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-tertiary/15 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Confirmed Split
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top text-right space-x-1">
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Inspect Webhook" type="button">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-secondary hover:text-on-surface" title="Ledger Trace" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Ledger Summary Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="text-secondary font-body-sm text-body-sm">
+          Showing <span class="font-semibold text-on-surface">1 - 5</span> of <span class="font-semibold text-on-surface">1,248</span> recorded bookings (PKR 4,820,000 Total GBV)
+        </div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-secondary font-label-sm text-label-sm shadow-sm" disabled="">Previous</button>
+<button class="px-space-sm py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold">1</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-secondary hover:text-on-surface font-label-sm text-label-sm shadow-sm">2</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-secondary hover:text-on-surface font-label-sm text-label-sm shadow-sm">3</button>
+<span class="px-1 text-secondary text-label-sm">...</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-secondary hover:text-on-surface font-label-sm text-label-sm shadow-sm">250</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-secondary hover:text-on-surface font-label-sm text-label-sm shadow-sm">Next</button>
+</div>
+</div>
+</div>
+<!-- Idempotency & Webhook Resilience Technical Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Live Webhook Monitor -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Active Settlement Webhooks</span>
+</div>
+<span class="text-[11px] font-mono text-secondary">PORT-443 TLS 1.3</span>
+</div>
+<div class="font-mono text-[11px] bg-surface-container-low p-space-sm rounded-lg text-secondary space-y-1 overflow-x-auto">
+<div class="text-tertiary font-semibold">[2024-10-14 14:22:18 PKT] POST /api/v1/escrow/split-settle → 200 OK</div>
+<div class="text-on-surface">{"booking_id":"#GB-89421","gross":111500,"platform_split":55750,"vendor_split":55750,"idempotency_key":"7f4a21...92b"}</div>
+<div class="text-tertiary font-semibold mt-1">[2024-10-14 13:48:02 PKT] POST /api/v1/escrow/split-settle → 200 OK</div>
+<div class="text-on-surface">{"booking_id":"#GB-89419","gross":76000,"platform_split":38000,"vendor_split":38000,"idempotency_key":"3a1c90...10d"}</div>
+</div>
+</div>
+<!-- Karakoram Weather Guarantee Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cloudy_snowing</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Karakoram Mountain Weather Engine</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary">LIVE RADAR SYNC</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+            Continuous sync with Gilgit &amp; Skardu Airport met-offices and NHA (National Highway Authority) pass status. Automatic refund verification triggers when official closures are declared.
+          </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-label-sm text-label-sm">
+<span class="text-secondary">Current Pass Alerts:</span>
+<span class="font-semibold text-error">Babusar Pass Snow Advisory Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Refund & Clawback Immutable Audit Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="refundAuditModal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="p-space-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error/15 text-error flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[24px]">history_edu</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Refund &amp; Commission Clawback Ledger</h3>
+<p class="font-body-sm text-body-sm text-secondary">Immutable transaction record: #GB-88102</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-secondary hover:text-on-surface flex items-center justify-center" id="closeRefundModal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg space-y-space-md">
+<!-- Event Cause Badge -->
+<div class="p-space-md rounded-xl bg-error-container/20 space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-error">Cause: Weather Guarantee Invalidation</span>
+<span class="text-[11px] font-mono text-secondary">NHA-INCIDENT-9921</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Skardu Willys 4x4 - Babusar Pass Closure</p>
+<p class="font-body-sm text-body-sm text-secondary">
+            Road blocked due to unseasonal snowfall at Babusar Top (4,173m). Under the Karakoram Weather Guarantee, guest receives 100% refund.
+          </p>
+</div>
+<!-- 3-Way Audit Ledger Split -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">3-Way Balancing Ledger Entry</span>
+<div class="space-y-2">
+<!-- Guest Leg -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Guest Ledger (Bilal Ahmed)</span>
+<span class="block text-[11px] text-secondary">100% Full Payment Reversal to JazzCash</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-tertiary font-bold">+ PKR 28,000 (Refunded)</span>
+<span class="block text-[10px] text-secondary">TxID: JZ-9021-X</span>
+</div>
+</div>
+<!-- Platform Leg -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Platform Commission Wallet</span>
+<span class="block text-[11px] text-secondary">Automated 50% Commission Clawback</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-error font-bold">- PKR 14,000 (Debited)</span>
+<span class="block text-[10px] text-secondary">Zero Fee Retained</span>
+</div>
+</div>
+<!-- Vendor Leg -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Partner Escrow (Skardu Willys)</span>
+<span class="block text-[11px] text-secondary">Pending 50% Escrow Released without Penalty</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-secondary font-bold">PKR 0 Balance (Released)</span>
+<span class="block text-[10px] text-tertiary">No Cancellation Penalty</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SHA-256 Hash Proof -->
+<div class="p-space-sm rounded-lg bg-surface-container font-mono text-[11px] text-secondary space-y-1">
+<div class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>
+            Cryptographic Audit Stamp (Immutable)
+          </div>
+<div class="truncate">TX-HASH: bf2288019aebc12089ef01c92019aae8817203bba2290192837482910fae</div>
+<div>TIMESTAMP: 2024-10-13T09:15:22.019+05:00 [PKT]</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="text-secondary font-label-sm text-label-sm">Status: Settlement Closed &amp; Archived</span>
+<button class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors" id="confirmAuditModal" type="button">
+          Download PDF Audit Certificate
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Inline Script for Tab switching and Modal -->
+<script>
+    (function initAdminCommissionPortal() {
+      // Modal controls
+      const modal = document.getElementById('refundAuditModal');
+      const openBtn = document.getElementById('openRefundModal');
+      const closeBtn = document.getElementById('closeRefundModal');
+      const confirmBtn = document.getElementById('confirmAuditModal');
+      const viewButtons = document.querySelectorAll('.view-clawback-btn');
+
+      function showModal() {
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        }
+      }
+
+      function hideModal() {
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+
+      if (openBtn) openBtn.addEventListener('click', showModal);
+      if (closeBtn) closeBtn.addEventListener('click', hideModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', hideModal);
+
+      viewButtons.forEach(btn => {
+        btn.addEventListener('click', showModal);
+      });
+
+      // Close modal on backdrop click
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) hideModal();
+        });
+      }
+
+      // Ledger tabs interaction
+      const tabs = document.querySelectorAll('.ledger-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('bg-surface-container-lowest', 'shadow-sm', 'text-on-surface');
+            t.classList.add('text-secondary');
+          });
+          tab.classList.add('bg-surface-container-lowest', 'shadow-sm', 'text-on-surface');
+          tab.classList.remove('text-secondary');
+        });
+      });
+
+      // Filter input instant dummy feedback
+      const searchInput = document.getElementById('bookingSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const val = e.target.value.toLowerCase();
+          const rows = document.querySelectorAll('#bookingsTableBody tr');
+          rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(val) ? '' : 'none';
+          });
+        });
+      }
+    })();
+  </script>
+</div></main></body></html>
